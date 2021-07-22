@@ -1,0 +1,1 @@
+UPDATE penduduk SET NoKK = '123', Nama = 'AAA', JenisKelamin = 'L', IdDesa = '13', Alamat = 'AS', TglLahir = '2021-07-20', TempatLahir = 'AS', IdAgama = '34', NoHP = '352', Email = '352', Facebook = '235', Instagram = '235', Twitter = '352', Foto = '253' WHERE penduduk.NIK = '35136001622331155';

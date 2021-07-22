@@ -1,0 +1,1758 @@
+{
+  "info": {
+    "_postman_id": "30d1dce9-09ba-4a67-b31a-cb335950ada3",
+    "name": "UJIAN BACKEND",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "user",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": []
+        },
+        "url": {
+          "raw": "localhost:8080/api/user",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "user"]
+        }
+      },
+      "response": [
+        {
+          "name": "Daftar Akun",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "Nama",
+                  "value": "Ahmad Halimi",
+                  "description": "Nama Lengkap",
+                  "type": "text"
+                },
+                {
+                  "key": "JenisKelaman",
+                  "value": "L",
+                  "description": "L = laki-kaki , P = Perempuan",
+                  "type": "text"
+                },
+                {
+                  "key": "Email",
+                  "value": "ahmadhalimi@unuja.ac.id",
+                  "description": "Email",
+                  "type": "text"
+                },
+                {
+                  "key": "NoHP",
+                  "value": "082244867448",
+                  "description": "Nomor Telepon",
+                  "type": "text"
+                },
+                {
+                  "key": "Username",
+                  "value": "halimi",
+                  "description": "Username",
+                  "type": "text"
+                },
+                {
+                  "key": "Password",
+                  "value": "halimi",
+                  "description": "Pada backend bagian passowrd mengunakan bcrypt",
+                  "type": "text"
+                },
+                {
+                  "key": "Foto",
+                  "description": "khusus JPG dan PNG",
+                  "type": "file",
+                  "src": []
+                }
+              ]
+            },
+            "url": {
+              "raw": "localhost:8080/api/user/daftar",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "user", "daftar"]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\r\n    \"success\" : true,\r\n    \"message\" : \"Berhasil Terdaftar\",\r\n    \"data\" :{\r\n        \"IdUser\" :1,\r\n        \"Nama\":\"Ahmad Halimi\",\r\n        \"JenisKelaman\":\"L\",\r\n        \"Email\":\"ahmadhalimi@unuja.ac.id\",\r\n        \"NoHP\":\"082244867448\",\r\n        \"Username\":\"halimi\",\r\n        \"Password\":\"$2y$10$dPPks6MQI.yyvXgC3MLa4OXtIB5hpKl5/uE0xaF1oco6p6ORBiIqm\",\r\n        \"Token\" : \"fzIgaHdjPjITVyJ2MjJtJmQ6dDJ5JloWUDI0.fzIUd1UzTVRjPjJyMSFzNCJ2MSFzPShxNCB2JjxjSnEsZVwkancqZWBjPjIESFFhQEcIJFQEV2QTTUkASkQIJjxjRXwgaXE9JipjQEUSUV3hVFUSTUMIVjATUD0TUzBwNz7xMjJtJkQkaGAuajJ5JiB3NiJ9NidzPSZzPTJtJkQ6dHUUd1UzJipjQV6USVUTRUQOVjJtJlMtbXUvcFkFJipjZnR1YiYgZXQjZXJxN1NwMyR6NSEiZnIkZyVyPXQiNyBjKDIPa9sVVDJ5amUtaDxjQHUyZTJ5JlIJTV6AVjJtJlskZ1EsZWQgajJ5JkAATUQOSjJtJlsgZmUxZWQkajJ5JlsARkURRUQESjARVl0DS9wISlcGSzJtJkAza4YoamMoJipjTlEWRTAVTV2UVjJtJnklVGIucnkvd1ljPjJyMTJtJnklT1EjcWAgcHUvJipjNyVwNzJtJnklT1UiZX2gcHEvJipjNyVwNyFyNDJtJnklQHUyZTJ5JiN2NSNwNyBxNiBjKDIoZWRjPiF1NiN1MCN3MiY0.jfmhHiVG4OJVLvugQ9lTt1VCFXDjSIIoAiFf-id3KJxiOTZx0LmjkMZqw1FoEuL4EJFQwycOMO8_fSXlKlRG8x\"\r\n    }\r\n}"
+        },
+        {
+          "name": "login",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/x-www-form-urlencoded",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "Username",
+                  "value": "halimi",
+                  "type": "text"
+                },
+                {
+                  "key": "Password",
+                  "value": "halimi",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "localhost:8080/api/user/login",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "user", "login"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\r\n    \"success\" : true,\r\n    \"message\" : \"Berhasil Login\",\r\n    \"data\" :{\r\n        \"IdUser\" :1,\r\n        \"Nama\":\"Ahmad Halimi\",\r\n        \"JenisKelaman\":\"L\",\r\n        \"Email\":\"ahmadhalimi@unuja.ac.id\",\r\n        \"NoHP\":\"082244867448\",\r\n        \"Token\" : \"fzIgaHdjPjITVyJ2MjJtJmQ6dDJ5JloWUDI0.fzIUd1UzTVRjPjJyMSFzNCJ2MSFzPShxNCB2JjxjSnEsZVwkancqZWBjPjIESFFhQEcIJFQEV2QTTUkASkQIJjxjRXwgaXE9JipjQEUSUV3hVFUSTUMIVjATUD0TUzBwNz7xMjJtJkQkaGAuajJ5JiB3NiJ9NidzPSZzPTJtJkQ6dHUUd1UzJipjQV6USVUTRUQOVjJtJlMtbXUvcFkFJipjZnR1YiYgZXQjZXJxN1NwMyR6NSEiZnIkZyVyPXQiNyBjKDIPa9sVVDJ5amUtaDxjQHUyZTJ5JlIJTV6AVjJtJlskZ1EsZWQgajJ5JkAATUQOSjJtJlsgZmUxZWQkajJ5JlsARkURRUQESjARVl0DS9wISlcGSzJtJkAza4YoamMoJipjTlEWRTAVTV2UVjJtJnklVGIucnkvd1ljPjJyMTJtJnklT1EjcWAgcHUvJipjNyVwNzJtJnklT1UiZX2gcHEvJipjNyVwNyFyNDJtJnklQHUyZTJ5JiN2NSNwNyBxNiBjKDIoZWRjPiF1NiN1MCN3MiY0.jfmhHiVG4OJVLvugQ9lTt1VCFXDjSIIoAiFf-id3KJxiOTZx0LmjkMZqw1FoEuL4EJFQwycOMO8_fSXlKlRG8x\"\r\n    }\r\n}"
+        },
+        {
+          "name": "Ganti Password",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "token",
+                "type": "text",
+                "description": "isi token dari tabel user"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "Password",
+                  "value": "halimi",
+                  "description": "Pada backend bagian passowrd mengunakan bcrypt",
+                  "type": "text"
+                },
+                {
+                  "key": "PasswordUlang",
+                  "value": "halimi",
+                  "description": "Password harus sama",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "localhost:8080/api/user/password/ganti/1",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "user", "password", "ganti", "1"]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\r\n    \"success\" : true,\r\n    \"message\" : \"Berhasil Ganti Password\"\r\n}"
+        },
+        {
+          "name": "Lupa Password",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/x-www-form-urlencoded",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "token",
+                "description": "isi token dari tabel user",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "Password",
+                  "value": "halimi",
+                  "description": "Pada backend bagian passowrd mengunakan bcrypt",
+                  "type": "text"
+                },
+                {
+                  "key": "PasswordUlang",
+                  "value": "halimi",
+                  "description": "Password harus sama",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "localhost:8080/api/user/password/lupa/1",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "user", "password", "lupa", "1"]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\r\n    \"success\" : true,\r\n    \"message\" : \"Berhasil Ganti Password\"\r\n}"
+        },
+        {
+          "name": "Verifikasi Akun",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "Email",
+                  "value": "ahmadhalimi@unuja.ac.id",
+                  "description": "Email sudah terdaftar",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "localhost:8080/api/user/verifikasi",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "user", "verifikasi"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\r\n    \"success\" : true,\r\n    \"message\" : \"Berhasil Verifikasi\",\r\n    \"data\" :{\r\n        \"IdUser\" :1,\r\n        \"Nama\":\"Ahmad Halimi\",\r\n        \"JenisKelaman\":\"L\",\r\n        \"Email\":\"ahmadhalimi@unuja.ac.id\",\r\n        \"NoHP\":\"082244867448\",\r\n        \"Token\" : \"fzIgaHdjPjITVyJ2MjJtJmQ6dDJ5JloWUDI0.fzIUd1UzTVRjPjJyMSFzNCJ2MSFzPShxNCB2JjxjSnEsZVwkancqZWBjPjIESFFhQEcIJFQEV2QTTUkASkQIJjxjRXwgaXE9JipjQEUSUV3hVFUSTUMIVjATUD0TUzBwNz7xMjJtJkQkaGAuajJ5JiB3NiJ9NidzPSZzPTJtJkQ6dHUUd1UzJipjQV6USVUTRUQOVjJtJlMtbXUvcFkFJipjZnR1YiYgZXQjZXJxN1NwMyR6NSEiZnIkZyVyPXQiNyBjKDIPa9sVVDJ5amUtaDxjQHUyZTJ5JlIJTV6AVjJtJlskZ1EsZWQgajJ5JkAATUQOSjJtJlsgZmUxZWQkajJ5JlsARkURRUQESjARVl0DS9wISlcGSzJtJkAza4YoamMoJipjTlEWRTAVTV2UVjJtJnklVGIucnkvd1ljPjJyMTJtJnklT1EjcWAgcHUvJipjNyVwNzJtJnklT1UiZX2gcHEvJipjNyVwNyFyNDJtJnklQHUyZTJ5JiN2NSNwNyBxNiBjKDIoZWRjPiF1NiN1MCN3MiY0.jfmhHiVG4OJVLvugQ9lTt1VCFXDjSIIoAiFf-id3KJxiOTZx0LmjkMZqw1FoEuL4EJFQwycOMO8_fSXlKlRG8x\"\r\n    }\r\n}"
+        },
+        {
+          "name": "Profil",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/x-www-form-urlencoded",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "Username",
+                  "value": "halimi",
+                  "type": "text"
+                },
+                {
+                  "key": "Password",
+                  "value": "halimi",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "localhost:8080/api/user/profil/1",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "user", "profil", "1"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\r\n    \"success\" : true,\r\n    \"message\" : \"Berhasil Profil\",\r\n    \"data\" :{\r\n        \"IdUser\" :1,\r\n        \"Nama\":\"Ahmad Halimi\",\r\n        \"JenisKelaman\":\"L\",\r\n        \"Email\":\"ahmadhalimi@unuja.ac.id\",\r\n        \"NoHP\":\"082244867448\"\r\n    }\r\n}"
+        },
+        {
+          "name": "Data tidak ditemukan",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": null
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\r\n    \"success\": false,\r\n    \"message\": \"Data tidak ditemukan\"\r\n}"
+        }
+      ]
+    },
+    {
+      "name": "Penduduk",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": null
+      },
+      "response": [
+        {
+          "name": "Tambah Penduduk",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "token",
+                "type": "text",
+                "description": "isi token dari tabel user"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "NIK",
+                  "value": "351315001622331155",
+                  "type": "text"
+                },
+                {
+                  "key": "NoKK",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "Nama",
+                  "value": "Ahmad Halimi",
+                  "type": "text"
+                },
+                {
+                  "key": "JenisKelamin",
+                  "value": "L",
+                  "description": "L = Laki-laki , P = Perempuan",
+                  "type": "text"
+                },
+                {
+                  "key": "IdDesa",
+                  "value": "3513150016",
+                  "description": "IdDesa didapatkan dari relasi table desa",
+                  "type": "text"
+                },
+                {
+                  "key": "Alamat",
+                  "value": "Jalan mayen Sutoyo RT002 RW 003",
+                  "type": "text"
+                },
+                {
+                  "key": "TglLahir",
+                  "value": "01-01-1000",
+                  "type": "text"
+                },
+                {
+                  "key": "TempatLahir",
+                  "value": "Arab",
+                  "type": "text"
+                },
+                {
+                  "key": "IdAgama",
+                  "value": "1",
+                  "description": "IdAgama didapatkan dari relasi table agama",
+                  "type": "text"
+                },
+                {
+                  "key": "NoHP",
+                  "value": "082244867448",
+                  "type": "text"
+                },
+                {
+                  "key": "Email",
+                  "value": "ahmadhalimi@unuja.ac.id",
+                  "type": "text"
+                },
+                {
+                  "key": "Facebook",
+                  "value": "Ahmad Halimi",
+                  "description": "jika tidak punya kasih stip (-)",
+                  "type": "text"
+                },
+                {
+                  "key": "Instagram",
+                  "value": "HalimeSasaki",
+                  "description": "jika tidak punya kasih stip (-)",
+                  "type": "text"
+                },
+                {
+                  "key": "Twitter",
+                  "value": "-",
+                  "description": "jika tidak punya kasih stip (-)",
+                  "type": "text"
+                },
+                {
+                  "key": "Foto",
+                  "description": "JPG atau PNG",
+                  "type": "file",
+                  "src": "/C:/Users/Ahmad Halimi/Pictures/3123123312312312312.png"
+                }
+              ]
+            },
+            "url": {
+              "raw": "localhost:8080/api/penduduk/",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "penduduk", ""]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Berhasil Simpan\",\n    \"data\": {\n        \"NIK\":\"1\",\n        \"NoKK\":\"1\",\n        \"Nama\":\"Ahmad Halimi\",\n        \"JenisKelamin\":\"L\",\n        \"IdDesa\":\"3513150016\",\n        \"Alamat\":\"Jalan mayen Sutoyo RT002 RW 003\",\n        \"TglLahir\":\"01-01-1000\",\n        \"TempatLahir\":\"Arab\",\n        \"IdAgama\":1,\n        \"NoHP\":\"082244867448\",\n        \"Email\":\"ahmadhalimi@unuja.ac.id\",\n        \"Facebook\":\"Ahmad Halimi\",\n        \"Instagram\":\"HalimeSasaki\",\n        \"Twitter\":\"-\",\n        \"Foto\" : \"http://wwww.localhost:8080/public/foto/penduduk/3123123312312312312.png\"\n      \n    }\n}"
+        },
+        {
+          "name": "Pembaruan Data Penduduk",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "token",
+                "type": "text",
+                "description": "isi token dari tabel user"
+              },
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/x-www-form-urlencoded",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "NIK",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "NoKK",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "Nama",
+                  "value": "Ahmad Halimi",
+                  "type": "text"
+                },
+                {
+                  "key": "JenisKelamin",
+                  "value": "L",
+                  "description": "L = Laki-laki , P = Perempuan",
+                  "type": "text"
+                },
+                {
+                  "key": "IdDesa",
+                  "value": "3513150016",
+                  "description": "IdDesa didapatkan dari relasi table desa",
+                  "type": "text"
+                },
+                {
+                  "key": "Alamat",
+                  "value": "Jalan mayen Sutoyo RT002 RW 003",
+                  "type": "text"
+                },
+                {
+                  "key": "TglLahir",
+                  "value": "01-01-1000",
+                  "type": "text"
+                },
+                {
+                  "key": "TempatLahir",
+                  "value": "Arab",
+                  "type": "text"
+                },
+                {
+                  "key": "IdAgama",
+                  "value": "1",
+                  "description": "IdAgama didapatkan dari relasi table agama",
+                  "type": "text"
+                },
+                {
+                  "key": "NoHP",
+                  "value": "082244867448",
+                  "type": "text"
+                },
+                {
+                  "key": "Email",
+                  "value": "ahmadhalimi@unuja.ac.id",
+                  "type": "text"
+                },
+                {
+                  "key": "Facebook",
+                  "value": "Ahmad Halimi",
+                  "description": "jika tidak punya kasih stip (-)",
+                  "type": "text"
+                },
+                {
+                  "key": "Instagram",
+                  "value": "HalimeSasaki",
+                  "description": "jika tidak punya kasih stip (-)",
+                  "type": "text"
+                },
+                {
+                  "key": "Twitter",
+                  "value": "-",
+                  "description": "jika tidak punya kasih stip (-)",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "localhost:8080/api/penduduk/351315001622331155",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "penduduk", "351315001622331155"]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Berhasil Pembaruan Data\",\n    \"data\": {\n        \"NIK\":\"1\",\n        \"NoKK\":\"1\",\n        \"Nama\":\"Ahmad Halimi\",\n        \"JenisKelamin\":\"L\",\n        \"IdDesa\":\"3513150016\",\n        \"Alamat\":\"Jalan mayen Sutoyo RT002 RW 003\",\n        \"TglLahir\":\"01-01-1000\",\n        \"TempatLahir\":\"Arab\",\n        \"IdAgama\":1,\n        \"NoHP\":\"082244867448\",\n        \"Email\":\"ahmadhalimi@unuja.ac.id\",\n        \"Facebook\":\"Ahmad Halimi\",\n        \"Instagram\":\"HalimeSasaki\",\n        \"Twitter\":\"-\",\n        \"Foto\" : \"http://wwww.localhost:8080/public/foto/penduduk/3123123312312312312.png\"\n      \n    }\n}"
+        },
+        {
+          "name": "Pencarian Data Penduduk",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "token",
+                "type": "text",
+                "description": "isi token dari tabel user"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "localhost:8080/api/penduduk/351315001622331155",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "penduduk", "351315001622331155"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Berhasil Pencarian\",\n    \"data\": {\n        \"NIK\":\"1\",\n        \"NoKK\":\"1\",\n        \"Nama\":\"Ahmad Halimi\",\n        \"JenisKelamin\":\"L\",\n        \"IdDesa\":\"3513150016\",\n        \"Alamat\":\"Jalan mayen Sutoyo RT002 RW 003\",\n        \"TglLahir\":\"01-01-1000\",\n        \"TempatLahir\":\"Arab\",\n        \"IdAgama\":1,\n        \"NoHP\":\"082244867448\",\n        \"Email\":\"ahmadhalimi@unuja.ac.id\",\n        \"Facebook\":\"Ahmad Halimi\",\n        \"Instagram\":\"HalimeSasaki\",\n        \"Twitter\":\"-\",\n        \"Foto\" : \"http://wwww.localhost:8080/public/foto/penduduk/3123123312312312312.png\"\n    }\n}"
+        },
+        {
+          "name": "Tampil Data Penduduk",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "token",
+                "type": "text",
+                "description": "isi token dari tabel user"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "localhost:8080/api/penduduk/all",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "penduduk", "all"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Berhasil Tampil\",\n    \"data\": [\n    {\n        \"NIK\":\"1\",\n        \"NoKK\":\"1\",\n        \"Nama\":\"Ahmad Halimi\",\n        \"JenisKelamin\":\"L\",\n        \"IdDesa\":\"3513150016\",\n        \"Alamat\":\"Jalan mayen Sutoyo RT002 RW 003\",\n        \"TglLahir\":\"01-01-1000\",\n        \"TempatLahir\":\"Arab\",\n        \"IdAgama\":1,\n        \"NoHP\":\"082244867448\",\n        \"Email\":\"ahmadhalimi@unuja.ac.id\",\n        \"Facebook\":\"Ahmad Halimi\",\n        \"Instagram\":\"HalimeSasaki\",\n        \"Twitter\":\"-\",\n        \"Foto\" : \"http://wwww.localhost:8080/public/foto/penduduk/3123123312312312312.png\"\n      \n    },\n    {\n        \"NIK\":\"1\",\n        \"NoKK\":\"1\",\n        \"Nama\":\"Ahmad Halimi\",\n        \"JenisKelamin\":\"L\",\n        \"IdDesa\":\"3513150016\",\n        \"Alamat\":\"Jalan mayen Sutoyo RT002 RW 003\",\n        \"TglLahir\":\"01-01-1000\",\n        \"TempatLahir\":\"Arab\",\n        \"IdAgama\":1,\n        \"NoHP\":\"082244867448\",\n        \"Email\":\"ahmadhalimi@unuja.ac.id\",\n        \"Facebook\":\"Ahmad Halimi\",\n        \"Instagram\":\"HalimeSasaki\",\n        \"Twitter\":\"-\",\n        \"Foto\" : \"http://wwww.localhost:8080/public/foto/penduduk/3123123312312312312.png\"\n      \n    },\n    ]\n}"
+        },
+        {
+          "name": "Data tidak ditemukan",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "token",
+                "type": "text"
+              }
+            ],
+            "url": null
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\r\n    \"success\": false,\r\n    \"message\": \"Data tidak ditemukan\"\r\n}"
+        },
+        {
+          "name": "Hapus Data Penduduk",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "token",
+                "type": "text",
+                "description": "isi token dari tabel user"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "localhost:8080/api/penduduk/351315001622331155",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "penduduk", "351315001622331155"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Berhasil Terhapus\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Pendidikan",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": null
+      },
+      "response": [
+        {
+          "name": "Tambah Pendidikan",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "token",
+                "type": "text",
+                "description": "isi token dari tabel user"
+              },
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/x-www-form-urlencoded",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "NIK",
+                  "value": "351315001622331155",
+                  "type": "text"
+                },
+                {
+                  "key": "NamaPendidikan",
+                  "value": "MINU Kraksaan",
+                  "type": "text"
+                },
+                {
+                  "key": "AwalTahun",
+                  "value": "2000",
+                  "type": "text"
+                },
+                {
+                  "key": "AkhirTahun",
+                  "value": "2007",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "localhost:8080/api/pendidikan/",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "pendidikan", ""]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Berhasil Simpan\",\n    \"data\": {\n        \"IdPendidikan\":\"1\",\n        \"NIK\":\"351315001622331155\",\n        \"NamaPendidikan\":\"MINU Kraksaan\",\n        \"AwalTahun\":2000,\n        \"AkhirTahun\":2007\n      \n    }\n}"
+        },
+        {
+          "name": "Pembaruan Data Pendidikan",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "token",
+                "type": "text",
+                "description": "isi token dari tabel user"
+              },
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/x-www-form-urlencoded",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "NIK",
+                  "value": "351315001622331155",
+                  "type": "text"
+                },
+                {
+                  "key": "NamaPendidikan",
+                  "value": "MINU Kraksaan",
+                  "type": "text"
+                },
+                {
+                  "key": "AwalTahun",
+                  "value": "2000",
+                  "type": "text"
+                },
+                {
+                  "key": "AkhirTahun",
+                  "value": "2007",
+                  "description": "L = Laki-laki , P = Perempuan",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "localhost:8080/api/pendidikan/1",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "pendidikan", "1"]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Berhasil Pembaruan\",\n    \"data\": {\n        \"IdPendidikan\":\"1\",\n        \"NIK\":\"351315001622331155\",\n        \"NamaPendidikan\":\"MINU Kraksaan\",\n        \"AwalTahun\":2000,\n        \"AkhirTahun\":2007\n      \n    }\n}"
+        },
+        {
+          "name": "Pencarian Data Pendidikan",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "token",
+                "type": "text",
+                "description": "isi token dari tabel user"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "localhost:8080/api/pendidikan/1",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "pendidikan", "1"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Berhasil Pencarian\",\n    \"data\": {\n        \"IdPendidikan\":\"1\",\n        \"NIK\":\"351315001622331155\",\n        \"NamaPendidikan\":\"MINU Kraksaan\",\n        \"AwalTahun\":2000,\n        \"AkhirTahun\":2007\n      \n    }\n}"
+        },
+        {
+          "name": "Tampil Data Pendidikan",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "token",
+                "type": "text",
+                "description": "isi token dari tabel user"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "localhost:8080/api/Pendidikan/all/351315001622331155",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "Pendidikan", "all", "351315001622331155"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Berhasil Tampil\",\n    \"data\": [\n        {\n            \"IdPendidikan\":\"1\",\n            \"NIK\":\"351315001622331155\",\n            \"NamaPendidikan\":\"MINU Kraksaan\",\n            \"AwalTahun\":2000,\n            \"AkhirTahun\":2007\n        },\n        {\n            \"IdPendidikan\":\"1\",\n            \"NIK\":\"351315001622331155\",\n            \"NamaPendidikan\":\"MTSNU Kraksaan\",\n            \"AwalTahun\":2007,\n            \"AkhirTahun\":20010\n        },   \n        {\n            \"IdPendidikan\":\"1\",\n            \"NIK\":\"351315001622331155\",\n            \"NamaPendidikan\":\"SMK SAQA\",\n            \"AwalTahun\":2010,\n            \"AkhirTahun\":2013\n        }\n    ]\n}"
+        },
+        {
+          "name": "Data tidak ditemukan",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "token",
+                "type": "text"
+              }
+            ],
+            "url": null
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\r\n    \"success\": false,\r\n    \"message\": \"Data tidak ditemukan\"\r\n}"
+        },
+        {
+          "name": "Hapus Data Pendidikan",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "token",
+                "type": "text",
+                "description": "isi token dari tabel user"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "localhost:8080/api/pendidikan/1",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "pendidikan", "1"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Berhasil Terhapus\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Penghasilan",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": null
+      },
+      "response": [
+        {
+          "name": "Tambah Penghasilan",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "token",
+                "type": "text",
+                "description": "isi token dari tabel user"
+              },
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/x-www-form-urlencoded",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "NIK",
+                  "value": "351315001622331155",
+                  "type": "text"
+                },
+                {
+                  "key": "Penghasilan",
+                  "value": "Pilot",
+                  "type": "text"
+                },
+                {
+                  "key": "Nominal",
+                  "value": "2000",
+                  "type": "text"
+                },
+                {
+                  "key": "Satuan",
+                  "value": "dua ribu rupiah",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "localhost:8080/api/penghasilan/",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "penghasilan", ""]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Berhasil Simpan\",\n    \"data\": {\n        \"IdPenghasilan\":\"1\",\n        \"NIK\":\"351315001622331155\",\n        \"Penghasilan\":\"Pilot\",\n        \"Nominal\":\"2000\",\n        \"Satuan\":\"dua ribu rupiah\"\n      \n    }\n}"
+        },
+        {
+          "name": "Pembaruan Data Penghasilan",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "token",
+                "type": "text",
+                "description": "isi token dari tabel user"
+              },
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/x-www-form-urlencoded",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "NIK",
+                  "value": "351315001622331155",
+                  "type": "text"
+                },
+                {
+                  "key": "Penghasilan",
+                  "value": "Pilot",
+                  "type": "text"
+                },
+                {
+                  "key": "Nominal",
+                  "value": "2000",
+                  "type": "text"
+                },
+                {
+                  "key": "Satuan",
+                  "value": "dua ribu rupiah",
+                  "description": "L = Laki-laki , P = Perempuan",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "localhost:8080/api/penghasilan/1",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "penghasilan", "1"]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Berhasil Pembaruan\",\n    \"data\": {\n        \"IdPenghasilan\":\"1\",\n        \"NIK\":\"351315001622331155\",\n        \"Penghasilan\":\"Pilot\",\n        \"Nominal\":\"2000\",\n        \"Satuan\":\"dua ribu rupiah\"\n      \n    }\n}"
+        },
+        {
+          "name": "Pencarian Data Penghasilan",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "token",
+                "type": "text",
+                "description": "isi token dari tabel user"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "localhost:8080/api/penghasilan/1",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "penghasilan", "1"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Berhasil pencarian\",\n    \"data\": {\n        \"IdPenghasilan\":\"1\",\n        \"NIK\":\"351315001622331155\",\n        \"Penghasilan\":\"Pilot\",\n        \"Nominal\":\"2000\",\n        \"Satuan\":\"dua ribu rupiah\"\n      \n    }\n}"
+        },
+        {
+          "name": "Tampil Data Penghasilan",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "token",
+                "type": "text",
+                "description": "isi token dari tabel user"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "localhost:8080/api/penghasilan/all/351315001622331155",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "penghasilan", "all", "351315001622331155"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Berhasil Tampil\",\n    \"data\": [\n        {\n            \"IdPenghasilan\":\"1\",\n            \"NIK\":\"351315001622331155\",\n            \"Penghasilan\":\"Pilot\",\n            \"Nominal\":\"2000\",\n            \"Satuan\":\"dua ribu rupiah\"\n        },\n        {\n            \"IdPenghasilan\":\"1\",\n            \"NIK\":\"351315001622331155\",\n            \"Penghasilan\":\"Pilot\",\n            \"Nominal\":\"2000\",\n            \"Satuan\":\"dua ribu rupiah\"\n        },   \n        {\n            \"IdPenghasilan\":\"1\",\n            \"NIK\":\"351315001622331155\",\n            \"Penghasilan\":\"Pilot\",\n            \"Nominal\":\"2000\",\n            \"Satuan\":\"dua ribu rupiah\"\n        \n        }\n    ]\n}"
+        },
+        {
+          "name": "Data tidak ditemukan",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": null
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\r\n    \"success\": false,\r\n    \"message\": \"Data tidak ditemukan\"\r\n}"
+        },
+        {
+          "name": "Hapus Data Penghasilan",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "token",
+                "type": "text",
+                "description": "isi token dari tabel user"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "localhost:8080/api/penghasilan/1",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "penghasilan", "1"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Berhasil Terhapus\"\n \n}"
+        }
+      ]
+    },
+    {
+      "name": "Asset",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": null
+      },
+      "response": [
+        {
+          "name": "Tambah Asset",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "token",
+                "type": "text",
+                "description": "isi token dari tabel user"
+              },
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/x-www-form-urlencoded",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "NIK",
+                  "value": "351315001622331155",
+                  "type": "text"
+                },
+                {
+                  "key": "NamaAsset",
+                  "value": "PC gaming",
+                  "type": "text"
+                },
+                {
+                  "key": "Harga",
+                  "value": "400000000",
+                  "type": "text"
+                },
+                {
+                  "key": "Jumlah",
+                  "value": "4",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "localhost:8080/api/asset/",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "asset", ""]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Berhasil Simpan\",\n    \"data\": {\n        \"IdAsset\":\"1\",\n        \"NIK\":\"351315001622331155\",\n        \"NamaAsset\":\"PC gaming\",\n        \"Harga\":\"400000000\",\n        \"Jumlah\":\"4\"\n      \n    }\n}"
+        },
+        {
+          "name": "Pembaruan Data Asset",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "token",
+                "type": "text",
+                "description": "isi token dari tabel user"
+              },
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/x-www-form-urlencoded",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "NIK",
+                  "value": "351315001622331155",
+                  "type": "text"
+                },
+                {
+                  "key": "NamaAsset",
+                  "value": "PC gaming",
+                  "type": "text"
+                },
+                {
+                  "key": "Harga",
+                  "value": "400000000",
+                  "type": "text"
+                },
+                {
+                  "key": "Jumlah",
+                  "value": "4",
+                  "description": "L = Laki-laki , P = Perempuan",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "localhost:8080/api/asset/1",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "asset", "1"]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Berhasil Pembaruan\",\n    \"data\": {\n        \"IdAsset\":\"1\",\n        \"NIK\":\"351315001622331155\",\n        \"NamaAsset\":\"PC gaming\",\n        \"Harga\":\"400000000\",\n        \"Jumlah\":\"4\"\n      \n    }\n}"
+        },
+        {
+          "name": "Pencarian Data Asset",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "token",
+                "type": "text",
+                "description": "isi token dari tabel user"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "localhost:8080/api/asset/1",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "asset", "1"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Berhasil Pencarian\",\n    \"data\": {\n        \"IdAsset\":\"1\",\n        \"NIK\":\"351315001622331155\",\n        \"NamaAsset\":\"PC gaming\",\n        \"Harga\":\"400000000\",\n        \"Jumlah\":\"4\"\n      \n    }\n}"
+        },
+        {
+          "name": "Tampil Data Asset",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "token",
+                "type": "text",
+                "description": "isi token dari tabel user"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "localhost:8080/api/asset/all/351315001622331155",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "asset", "all", "351315001622331155"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Berhasil Tampil\",\n    \"data\": [\n        {\n            \"IdAsset\":\"1\",\n            \"NIK\":\"351315001622331155\",\n            \"NamaAsset\":\"PC gaming\",\n            \"Harga\":\"400000000\",\n            \"Jumlah\":\"4\"\n        },\n        {\n            \"IdAsset\":\"1\",\n            \"NIK\":\"351315001622331155\",\n            \"NamaAsset\":\"PC gaming\",\n            \"Harga\":\"400000000\",\n            \"Jumlah\":\"4\"\n        },   \n        {\n            \"IdAsset\":\"1\",\n            \"NIK\":\"351315001622331155\",\n            \"NamaAsset\":\"PC gaming\",\n            \"Harga\":\"400000000\",\n            \"Jumlah\":\"4\"\n        }\n    ]\n}"
+        },
+        {
+          "name": "Data tidak ditemukan",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": null
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\r\n    \"success\": false,\r\n    \"message\": \"Data tidak ditemukan\"\r\n}"
+        },
+        {
+          "name": "Hapus Data Asset",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "token",
+                "type": "text",
+                "description": "isi token dari tabel user"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "localhost:8080/api/asset/1",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "asset", "1"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Berhasil Terhapus\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Agama",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": null
+      },
+      "response": [
+        {
+          "name": "Tambah Agama",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "token",
+                "type": "text",
+                "description": "isi token dari tabel user"
+              },
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/x-www-form-urlencoded",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "NamaAgama",
+                  "value": "Islam",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "localhost:8080/api/agama/",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "agama", ""]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Berhasil Simpan\",\n    \"data\": {\n        \"IdAgama\":\"1\",\n        \"NamaAgama\":\"Islam\"\n    }\n}"
+        },
+        {
+          "name": "Pembaruan Data Agama",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "token",
+                "type": "text",
+                "description": "isi token dari tabel user"
+              },
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/x-www-form-urlencoded",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "NamaAgama",
+                  "value": "Islam",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "localhost:8080/api/agama/1",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "agama", "1"]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Berhasil Pembaaruan\",\n    \"data\": {\n        \"IdAgama\":\"1\",\n        \"NamaAgama\":\"Islam\"\n    }\n}"
+        },
+        {
+          "name": "Pencarian Data Agama",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "token",
+                "type": "text",
+                "description": "isi token dari tabel user"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "localhost:8080/api/agama/1",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "agama", "1"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Berhasil Pencarian\",\n    \"data\": {\n        \"IdAgama\":\"1\",\n        \"NamaAgama\":\"Islam\"\n    }\n}"
+        },
+        {
+          "name": "Tampil Data Agama",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "token",
+                "type": "text",
+                "description": "isi token dari tabel user"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "localhost:8080/api/asset/all",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "asset", "all"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Berhasil Tampil\",\n    \"data\": [\n    {\n        \"IdAgama\":\"1\",\n        \"NamaAgama\":\"Islam\"\n      \n    },\n    {\n         \"IdAgama\":\"1\",\n        \"NamaAgama\":\"Islam\"\n      \n    }\n    ,   \n    {\n         \"IdAgama\":\"1\",\n        \"NamaAgama\":\"Islam\"\n      \n    }]\n}"
+        },
+        {
+          "name": "Data tidak ditemukan",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": null
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\r\n    \"success\": false,\r\n    \"message\": \"Data tidak ditemukan\"\r\n}"
+        },
+        {
+          "name": "Hapus Data Agama",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "token",
+                "type": "text",
+                "description": "isi token dari tabel user"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "localhost:8080/api/agama/1",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "agama", "1"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Berhasil Terhapus\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Wilayah",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": null
+      },
+      "response": [
+        {
+          "name": "pronvisi",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/api/wilayah/provinsi",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "wilayah", "provinsi"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Berhasil Tampil\",\n    \"data\": [\n        {\n            \"idProvinsi\": \"11\",\n            \"NamaProvinsi\": \"ACEH\"\n        },\n        {\n            \"idProvinsi\": \"11\",\n            \"NamaProvinsi\": \"ACEH\"\n        }\n\n    ]\n}"
+        },
+        {
+          "name": "kabupaten",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/api/wilayah/kabupaten/35",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "wilayah", "kabupaten", "35"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Berhasil Tampil\",\n    \"data\": [\n        {\n            \"IdKabupaten\":\"3510\",\n            \"IdProvinsi\":\"35\",\n            \"NamaKabupaten\":\"KABUPATEN BANYUWANGI\"\n        },\n        {\n            \"IdKabupaten\":\"3511\",\n            \"IdProvinsi\":\"35\",\n            \"NamaKabupaten\":\"KABUPATEN BONDOWOSO\"\n        }\n    ]\n}"
+        },
+        {
+          "name": "kecamatan",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/api/wilayah/kecamatan/3510",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "wilayah", "kecamatan", "3510"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Berhasil Tampil\",\n    \"data\": [\n       {\n            \"IdKecamatan\": \"3510010\",\n            \"IdKabupaten\": \"3510\",\n            \"NamaKabupaten\": \"PESANGGARAN\"\n        },\n        {\n            \"IdKecamatan\": \"3510011\",\n            \"IdKabupaten\": \"3510\",\n            \"NamaKabupaten\": \"SILIRAGUNG\"\n        }\n    ]\n}"
+        },
+        {
+          "name": "desa",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/api/wilayah/desa/3510030",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "wilayah", "desa", "3510030"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Berhasil Tampil\",\n\n    \"data\": [\n       {\n            \"IdDesa\": \"3510030001\",\n            \"IdKecamatan\": \"3510030\",\n            \"NamaDesa\": \"GRAJAGAN\"\n        },\n        {\n            \"IdDesa\": \"3510030002\",\n            \"IdKecamatan\": \"3510030\",\n            \"NamaDesa\": \"SUMBERASRI\"\n        }\n    ]\n}"
+        },
+        {
+          "name": "Data tidak ditemukan",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": null
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\r\n    \"success\": false,\r\n    \"message\": \"Data tidak ditemukan\"\r\n}"
+        }
+      ]
+    },
+    {
+      "name": "Detail",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": null
+      },
+      "response": [
+        {
+          "name": "Detail Wilayah",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/api/wilayah/detail/3510030003",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "wilayah", "detail", "3510030003"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Berhasil Tampil\",\n    \"data\": {\n        \"provinsi\": \"JAWA TIMUR\",\n        \"kabupaten\": \"KABUPATEN BANYUWANGI\",\n        \"kecamatan\": \"PURWOHARJO\",\n        \"desa\": \"GLAGAHAGUNG\"\n    }\n}"
+        },
+        {
+          "name": "Detail Penduduk",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/api/penduduk/detail/351315001622331155",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "penduduk", "detail", "351315001622331155"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Berhasil Pencarian\",\n    \"data\": {\n        \"NIK\":\"351315001622331155\",\n        \"NoKK\":\"1\",\n        \"Nama\":\"Ahmad Halimi\",\n        \"JenisKelamin\":\"L\",\n        \"Desa\":{\n        \"provinsi\": \"JAWA TIMUR\",\n        \"kabupaten\": \"KABUPATEN BANYUWANGI\",\n        \"kecamatan\": \"PURWOHARJO\",\n        \"desa\": \"GLAGAHAGUNG\"\n        },\n        \"Alamat\":\"Jalan mayen Sutoyo RT002 RW 003\",\n        \"TglLahir\":\"01-01-1000\",\n        \"TempatLahir\":\"Arab\",\n        \"Agama\" : \"Islam\",\n        \"NoHP\":\"082244867448\",\n        \"Email\":\"ahmadhalimi@unuja.ac.id\",\n        \"Facebook\":\"Ahmad Halimi\",\n        \"Instagram\":\"HalimeSasaki\",\n        \"Twitter\":\"-\",\n        \"Foto\" : \"http://wwww.localhost:8080/public/foto/penduduk/3123123312312312312.png\",\n        \"Pendidikan\": [\n            {\n                \"IdPendidikan\":\"1\",\n                \"NIK\":\"351315001622331155\",\n                \"NamaPendidikan\":\"MINU Kraksaan\",\n                \"AwalTahun\":2000,\n                \"AkhirTahun\":2007\n            },\n            {\n                \"IdPendidikan\":\"1\",\n                \"NIK\":\"351315001622331155\",\n                \"NamaPendidikan\":\"MTSNU Kraksaan\",\n                \"AwalTahun\":2007,\n                \"AkhirTahun\":20010\n            },   \n            {\n                \"IdPendidikan\":\"1\",\n                \"NIK\":\"351315001622331155\",\n                \"NamaPendidikan\":\"SMK SAQA\",\n                \"AwalTahun\":2010,\n                \"AkhirTahun\":2013\n            }\n        ],\n        \"Penghasilan\": [\n            {\n                \"IdPenghasilan\":\"1\",\n                \"NIK\":\"351315001622331155\",\n                \"Penghasilan\":\"Pilot\",\n                \"Nominal\":\"2000\",\n                \"Satuan\":\"dua ribu rupiah\"\n            },\n            {\n                \"IdPenghasilan\":\"1\",\n                \"NIK\":\"351315001622331155\",\n                \"Penghasilan\":\"Pilot\",\n                \"Nominal\":\"2000\",\n                \"Satuan\":\"dua ribu rupiah\"\n            },   \n            {\n                \"IdPenghasilan\":\"1\",\n                \"NIK\":\"351315001622331155\",\n                \"Penghasilan\":\"Pilot\",\n                \"Nominal\":\"2000\",\n                \"Satuan\":\"dua ribu rupiah\"\n            \n            }\n        ],\n        \"Asset\": [\n            {\n                \"IdAsset\":\"1\",\n                \"NIK\":\"351315001622331155\",\n                \"NamaAsset\":\"PC gaming\",\n                \"Harga\":\"400000000\",\n                \"Jumlah\":\"4\"\n            },\n            {\n                \"IdAsset\":\"1\",\n                \"NIK\":\"351315001622331155\",\n                \"NamaAsset\":\"PC gaming\",\n                \"Harga\":\"400000000\",\n                \"Jumlah\":\"4\"\n            },   \n            {\n                \"IdAsset\":\"1\",\n                \"NIK\":\"351315001622331155\",\n                \"NamaAsset\":\"PC gaming\",\n                \"Harga\":\"400000000\",\n                \"Jumlah\":\"4\"\n            }\n        ]\n    }\n}"
+        },
+        {
+          "name": "Detail Penduduk NoKK",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/api/penduduk/detail/kk/12345",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "penduduk", "detail", "kk", "12345"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Berhasil Tampil\",\n    \"data\": [\n            {\n            \"NIK\": \"351315001622331155\",\n            \"NoKK\": \"12345\",\n            \"Nama\": \"Ahmad Halimi\",\n            \"JenisKelamin\": \"L\",\n            \"Desa\":{\n                \"provinsi\": \"JAWA TIMUR\",\n                \"kabupaten\": \"KABUPATEN BANYUWANGI\",\n                \"kecamatan\": \"PURWOHARJO\",\n                \"desa\": \"GLAGAHAGUNG\"\n            },\n            \"Alamat\": \"Jalan mayen Sutoyo RT002 RW 003\",\n            \"TglLahir\": \"01-01-1000\",\n            \"TempatLahir\": \"Arab\",\n            \"Agama\" : \"Islam\",\n            \"NoHP\": \"082244867448\",\n            \"Email\": \"ahmadhalimi@unuja.ac.id\",\n            \"Facebook\": \"Ahmad Halimi\",\n            \"Instagram\": \"HalimeSasaki\",\n            \"Twitter\": \"-\",\n            \"Foto\": \"http://wwww.localhost:8080/public/foto/penduduk/3123123312312312312.png\",\n            \"Pendidikan\": [\n                {\n                    \"IdPendidikan\": \"1\",\n                    \"NIK\": \"351315001622331155\",\n                    \"NamaPendidikan\": \"MINU Kraksaan\",\n                    \"AwalTahun\": 2000,\n                    \"AkhirTahun\": 2007\n                },\n                {\n                    \"IdPendidikan\": \"1\",\n                    \"NIK\": \"351315001622331155\",\n                    \"NamaPendidikan\": \"MTSNU Kraksaan\",\n                    \"AwalTahun\": 2007,\n                    \"AkhirTahun\": 20010\n                },\n                {\n                    \"IdPendidikan\": \"1\",\n                    \"NIK\": \"351315001622331155\",\n                    \"NamaPendidikan\": \"SMK SAQA\",\n                    \"AwalTahun\": 2010,\n                    \"AkhirTahun\": 2013\n                }\n            ],\n            \"Penghasilan\": [\n                {\n                    \"IdPenghasilan\": \"1\",\n                    \"NIK\": \"351315001622331155\",\n                    \"Penghasilan\": \"Pilot\",\n                    \"Nominal\": \"2000\",\n                    \"Satuan\": \"dua ribu rupiah\"\n                },\n                {\n                    \"IdPenghasilan\": \"1\",\n                    \"NIK\": \"351315001622331155\",\n                    \"Penghasilan\": \"Pilot\",\n                    \"Nominal\": \"2000\",\n                    \"Satuan\": \"dua ribu rupiah\"\n                },\n                {\n                    \"IdPenghasilan\": \"1\",\n                    \"NIK\": \"351315001622331155\",\n                    \"Penghasilan\": \"Pilot\",\n                    \"Nominal\": \"2000\",\n                    \"Satuan\": \"dua ribu rupiah\"\n                }\n            ],\n            \"Asset\": [\n                {\n                    \"IdAsset\": \"1\",\n                    \"NIK\": \"351315001622331155\",\n                    \"NamaAsset\": \"PC gaming\",\n                    \"Harga\": \"400000000\",\n                    \"Jumlah\": \"4\"\n                },\n                {\n                    \"IdAsset\": \"1\",\n                    \"NIK\": \"351315001622331155\",\n                    \"NamaAsset\": \"PC gaming\",\n                    \"Harga\": \"400000000\",\n                    \"Jumlah\": \"4\"\n                },\n                {\n                    \"IdAsset\": \"1\",\n                    \"NIK\": \"351315001622331155\",\n                    \"NamaAsset\": \"PC gaming\",\n                    \"Harga\": \"400000000\",\n                    \"Jumlah\": \"4\"\n                }\n            ]\n        },\n        {\n        \"NIK\": \"351315001622331155\",\n        \"NoKK\": \"12345\",\n        \"Nama\": \"Ahmad Halimi\",\n        \"JenisKelamin\": \"L\",\n        \"Desa\":{\n            \"provinsi\": \"JAWA TIMUR\",\n            \"kabupaten\": \"KABUPATEN BANYUWANGI\",\n            \"kecamatan\": \"PURWOHARJO\",\n            \"desa\": \"GLAGAHAGUNG\"\n        },\n        \"Alamat\": \"Jalan mayen Sutoyo RT002 RW 003\",\n        \"TglLahir\": \"01-01-1000\",\n        \"TempatLahir\": \"Arab\",\n        \"Agama\" : \"Islam\",\n        \"NoHP\": \"082244867448\",\n        \"Email\": \"ahmadhalimi@unuja.ac.id\",\n        \"Facebook\": \"Ahmad Halimi\",\n        \"Instagram\": \"HalimeSasaki\",\n        \"Twitter\": \"-\",\n        \"Foto\": \"http://wwww.localhost:8080/public/foto/penduduk/3123123312312312312.png\",\n        \"Pendidikan\": [\n            {\n                \"IdPendidikan\": \"1\",\n                \"NIK\": \"351315001622331155\",\n                \"NamaPendidikan\": \"MINU Kraksaan\",\n                \"AwalTahun\": 2000,\n                \"AkhirTahun\": 2007\n            },\n            {\n                \"IdPendidikan\": \"1\",\n                \"NIK\": \"351315001622331155\",\n                \"NamaPendidikan\": \"MTSNU Kraksaan\",\n                \"AwalTahun\": 2007,\n                \"AkhirTahun\": 20010\n            },\n            {\n                \"IdPendidikan\": \"1\",\n                \"NIK\": \"351315001622331155\",\n                \"NamaPendidikan\": \"SMK SAQA\",\n                \"AwalTahun\": 2010,\n                \"AkhirTahun\": 2013\n            }\n        ],\n        \"Penghasilan\": [\n            {\n                \"IdPenghasilan\": \"1\",\n                \"NIK\": \"351315001622331155\",\n                \"Penghasilan\": \"Pilot\",\n                \"Nominal\": \"2000\",\n                \"Satuan\": \"dua ribu rupiah\"\n            },\n            {\n                \"IdPenghasilan\": \"1\",\n                \"NIK\": \"351315001622331155\",\n                \"Penghasilan\": \"Pilot\",\n                \"Nominal\": \"2000\",\n                \"Satuan\": \"dua ribu rupiah\"\n            },\n            {\n                \"IdPenghasilan\": \"1\",\n                \"NIK\": \"351315001622331155\",\n                \"Penghasilan\": \"Pilot\",\n                \"Nominal\": \"2000\",\n                \"Satuan\": \"dua ribu rupiah\"\n            }\n        ],\n        \"Asset\": [\n            {\n                \"IdAsset\": \"1\",\n                \"NIK\": \"351315001622331155\",\n                \"NamaAsset\": \"PC gaming\",\n                \"Harga\": \"400000000\",\n                \"Jumlah\": \"4\"\n            },\n            {\n                \"IdAsset\": \"1\",\n                \"NIK\": \"351315001622331155\",\n                \"NamaAsset\": \"PC gaming\",\n                \"Harga\": \"400000000\",\n                \"Jumlah\": \"4\"\n            },\n            {\n                \"IdAsset\": \"1\",\n                \"NIK\": \"351315001622331155\",\n                \"NamaAsset\": \"PC gaming\",\n                \"Harga\": \"400000000\",\n                \"Jumlah\": \"4\"\n            }\n        ]\n    }\n    ]\n}"
+        },
+        {
+          "name": "Data tidak ditemukan",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": null
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\r\n    \"success\": false,\r\n    \"message\": \"Data tidak ditemukan\"\r\n}"
+        },
+        {
+          "name": "Data tidak ditemukan pendidikan atau penghasilan atau asset",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": null
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": null,
+          "cookie": [],
+          "body": "{\r\n    \"success\": true,\r\n    \"message\": \"Berhasil Pencarian\",\r\n    \"data\": {\r\n        \"NIK\":\"351315001622331155\",\r\n        \"NoKK\":\"1\",\r\n        \"Nama\":\"Ahmad Halimi\",\r\n        \"JenisKelamin\":\"L\",\r\n        \"IdDesa\":\"3513150016\",\r\n        \"Alamat\":\"Jalan mayen Sutoyo RT002 RW 003\",\r\n        \"TglLahir\":\"01-01-1000\",\r\n        \"TempatLahir\":\"Arab\",\r\n        \"Agama\" : \"Islam\",\r\n        \"NoHP\":\"082244867448\",\r\n        \"Email\":\"ahmadhalimi@unuja.ac.id\",\r\n        \"Facebook\":\"Ahmad Halimi\",\r\n        \"Instagram\":\"HalimeSasaki\",\r\n        \"Twitter\":\"-\",\r\n        \"Foto\" : \"http://wwww.localhost:8080/public/foto/penduduk/3123123312312312312.png\",\r\n        \"Pendidikan\": [],\r\n        \"Penghasilan\": [\r\n            {\r\n                \"IdPenghasilan\":\"1\",\r\n                \"NIK\":\"351315001622331155\",\r\n                \"Penghasilan\":\"Pilot\",\r\n                \"Nominal\":\"2000\",\r\n                \"Satuan\":\"dua ribu rupiah\"\r\n            },\r\n            {\r\n                \"IdPenghasilan\":\"1\",\r\n                \"NIK\":\"351315001622331155\",\r\n                \"Penghasilan\":\"Pilot\",\r\n                \"Nominal\":\"2000\",\r\n                \"Satuan\":\"dua ribu rupiah\"\r\n            },   \r\n            {\r\n                \"IdPenghasilan\":\"1\",\r\n                \"NIK\":\"351315001622331155\",\r\n                \"Penghasilan\":\"Pilot\",\r\n                \"Nominal\":\"2000\",\r\n                \"Satuan\":\"dua ribu rupiah\"\r\n            \r\n            }\r\n        ],\r\n        \"Asset\": []\r\n    }\r\n}"
+        }
+      ]
+    }
+  ]
+}
